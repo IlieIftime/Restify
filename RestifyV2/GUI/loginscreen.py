@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
+
 from GUI.main_gui import MainGUI
+
 
 class LoginScreen(MainGUI):
     def __init__(self):

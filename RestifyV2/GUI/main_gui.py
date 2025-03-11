@@ -1,6 +1,7 @@
 import tkinter as tk
+
 from PIL import Image, ImageTk
-import os
+
 
 class MainGUI(tk.Tk):
     def __init__(self):

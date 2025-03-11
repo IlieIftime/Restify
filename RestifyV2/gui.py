@@ -1,6 +1,6 @@
-from PIL import Image, ImageTk
-from tkinter import ttk
 import tkinter as tk
+
+from PIL import Image, ImageTk
 
 LARGURA = 1200
 ALTURA = 1200
@@ -10,7 +10,7 @@ root = tk.Tk()
 root.title("Login - Restify")
 
 # Carregar e redimensionar a imagem de fundo
-img = Image.open("img.png")
+img = Image.open("img/img.png")
 resized_image = img.resize((LARGURA, ALTURA), Image.LANCZOS)
 tk_image = ImageTk.PhotoImage(resized_image)
 
@@ -19,7 +19,7 @@ label_fundo = tk.Label(root, image=tk_image)
 label_fundo.place(x=0, y=0, relwidth=1, relheight=1)
 
 # Carregar e redimensionar o logo
-logo = Image.open("logo.png")
+logo = Image.open("img/logo.png")
 resized_logo = logo.resize((200, 200), Image.LANCZOS)  # ajuste o tamanho conforme necessário
 tk_logo = ImageTk.PhotoImage(resized_logo)
 

@@ -1,5 +1,7 @@
 import tkinter as tk
+
 from GUI.main_gui import MainGUI
+
 
 class WelcomeScreen(MainGUI):
     def __init__(self):
