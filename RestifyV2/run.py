@@ -4,11 +4,11 @@
 # Marin Cepeleaga 2ºano TDIA,
 # Cristina Silva 2º ano TDE,
 # Patricia Silva 2ºano TDE
-from GUI.main_gui import MainGUI
-
+from GUI.login_screen import LoginScreen
+from GUI.begin_menu import BeginMenu
+import tkinter as tk
 
 if __name__ == "__main__":
-    app = MainGUI()
-    app.show_welcome_screen()
-   # Troque para LoginScreen() ou RegisterScreen() para testar
-    app.mainloop()
+    root = tk.Tk()
+    app = BeginMenu(root)
+    root.mainloop()

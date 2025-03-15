@@ -1,1 +1,36 @@
-{"username": ""}
+{
+    "username": "",
+    "despertadores": [
+        {
+            "nome": "Despertador",
+            "hora": "07:00",
+            "active_days": [],
+            "ativo": true
+        },
+        {
+            "nome": "Despertador",
+            "hora": "07:55",
+            "active_days": [
+                "Quarta"
+            ],
+            "ativo": true
+        },
+        {
+            "nome": "Despertador",
+            "hora": "07:00",
+            "active_days": [
+                "Segunda",
+                "Quinta"
+            ],
+            "ativo": true
+        },
+        {
+            "nome": "Despertador",
+            "hora": "07:00",
+            "active_days": [
+                "Domingo"
+            ],
+            "ativo": true
+        }
+    ]
+}
