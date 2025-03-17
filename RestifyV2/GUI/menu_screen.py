@@ -3,7 +3,7 @@ from PIL import Image, ImageTk
 from GUI.audio_screen import AudioScreen
 from GUI.definicoes_screen import DefinicoesScreen
 from GUI.begin_menu import BeginMenu
-from GUI.ultimo_ciclo_screen import Ultimo_ciclo
+from GUI.ultimo_ciclo_screen import UltimoCiclo
 from GUI.ultima_semana_screen import Ultima_semana
 
 class MenuScreen:
@@ -81,7 +81,7 @@ class MenuScreen:
         """Retorna para a tela inicial."""
         for widget in self.root.winfo_children():
             widget.destroy()
-        Ultimo_ciclo(self.root)
+        UltimoCiclo(self.root)
 
     def go_to_ulima_semana(self):
         """Retorna para a tela inicial."""

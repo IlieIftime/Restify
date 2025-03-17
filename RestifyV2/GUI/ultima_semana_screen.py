@@ -44,13 +44,13 @@ class Ultima_semana: #class da ultima semana
                                      padx=20, pady=10, bd=2, relief="raised", command=self.go_to_horas_dormidas)
         btn_horas_dormidas.place(relx=0.5, rely=0.3, anchor="center", width=200, height=50)
 
-        btn_movimentos_almofada = tk.Button(self.root, text="Ajuste Almofada", font=("Arial", 14), bg='white', fg='black',
+        btn_movimentos_almofada = tk.Button(self.root, text="Movimentos Almofada", font=("Arial", 14), bg='white', fg='black',
                                      padx=20,
                                      pady=10, bd=2, relief="raised", command=self.go_to_movimentos_almofada)
         btn_movimentos_almofada.place(relx=0.5, rely=0.4, anchor="center", width=200, height=50)
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
 
     def go_to_horas_dormidas(self):
         self.root.destroy()  # vai para a tela de horas dormidas
@@ -61,9 +61,9 @@ class Ultima_semana: #class da ultima semana
 
     def go_to_movimentos_almofada(self):
         self.root.destroy()  # vai para a tela do historico de movimentos da almofada
-        from GUI.movimento_almofada_screen import Movimento_almofada  # Import here to avoid circular imports
+        from GUI.movimento_almofada_screen import MovimentoAlmofada  # Import here to avoid circular imports
         movimento_almofada_root = tk.Tk()
-        movimento_almofada_screen = Movimento_almofada(movimento_almofada_root)
+        movimento_almofada_screen = MovimentoAlmofada(movimento_almofada_root)
         movimento_almofada_root.mainloop()
 
     def go_back(self):
@@ -72,3 +72,8 @@ class Ultima_semana: #class da ultima semana
         menu_root = tk.Tk()
         menu_screen = MenuScreen(menu_root)
         menu_root.mainloop()
+
+    """logica da exibição dos resultados"""
+
+    def power_bi_show(self):
+        pass

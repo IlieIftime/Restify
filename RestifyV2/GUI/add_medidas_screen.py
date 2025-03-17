@@ -49,10 +49,12 @@ class add_medidas:
         self.shoulder_width_entry.insert(0, self.shoulder_width if self.shoulder_width else "40")  # Default shoulder width
 
         # Save button
-        tk.Button(self.root, text="Salvar Configurações", command=self.save_initial_settings, width=20, bg='blue', fg='white', font=("Arial", 12)).place(relx=0.5, rely=0.5, anchor="center")
+        tk.Button(self.root, text="Salvar Configurações", command=self.save_initial_settings,font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised").place(relx=0.5, rely=0.5, anchor="center")
 
         # Back button
-        tk.Button(self.root, text="Voltar", command=self.go_back, width=20, bg='red', fg='white', font=("Arial", 12)).place(relx=0.5, rely=0.6, anchor="center")
+        tk.Button(self.root, text="Voltar", command=self.go_back,width=17, font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised").place(relx=0.5, rely=0.6, anchor="center")
 
     def save_initial_settings(self):
         # Save height and shoulder width

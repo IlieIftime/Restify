@@ -1,5 +1,9 @@
 import tkinter as tk
+from tkinter import messagebox  # Para exibir pop-ups de aviso
 from PIL import Image, ImageTk
+import json
+import os
+import re  # Para usar expressões regulares na validação de email
 
 
 class RegisterScreen:
@@ -58,8 +62,77 @@ class RegisterScreen:
         btn_back = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black', padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
         btn_back.place(relx=0.5, rely=0.65, anchor="center", width=200, height=50)
 
+    def validate_email(self, email):
+        """Valida o formato do email."""
+        # Expressão regular para validar o formato de um email
+        regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+        return re.match(regex, email) is not None
+
+    def validate_password(self, password):
+        """Valida o comprimento da password."""
+        return len(password) >= 8
+
     def register(self):
-        print("Lógica de criação de conta aqui")
+        """Lógica de criação de conta."""
+        username = self.entry_username.get()
+        password = self.entry_password.get()
+
+        # Verificar se os campos estão preenchidos
+        if not username or not password:
+            messagebox.showwarning("Campos Vazios", "Por favor, preencha todos os campos.")
+            return False
+
+        # Validar o formato do email
+        if not self.validate_email(username):
+            messagebox.showwarning("Email Inválido", "O email deve estar no formato exemplo@dominio.com.")
+            return False
+
+        # Validar o comprimento da password
+        if not self.validate_password(password):
+            messagebox.showwarning("Password Inválida", "A password deve ter no mínimo 8 caracteres.")
+            return False
+
+        # Verificar se o ficheiro conta.json já existe
+        if os.path.exists("config/conta.json"):
+            with open("config/conta.json", "r") as f:
+                try:
+                    contas_existentes = json.load(f)
+                    # Verificar se o utilizador já existe
+                    if isinstance(contas_existentes, list):  # Se for uma lista de contas
+                        for conta in contas_existentes:
+                            if conta.get("email") == username:
+                                messagebox.showwarning("Utilizador Existente", "Este nome de utilizador já está registado.")
+                                return False
+                    else:  # Se for um único dicionário (formato antigo)
+                        if contas_existentes.get("email") == username:
+                            messagebox.showwarning("Utilizador Existente", "Este nome de utilizador já está registado.")
+                            return False
+                except json.JSONDecodeError:
+                    # Se o ficheiro estiver vazio ou corrompido, tratar como novo
+                    contas_existentes = []
+        else:
+            # Se o ficheiro não existir, criar uma lista vazia
+            contas_existentes = []
+
+        # Criar a pasta config se não existir
+        if not os.path.exists("config"):
+            os.makedirs("config")
+
+        # Criar nova conta
+        nova_conta = {"email": username, "password": password}
+
+        # Adicionar a nova conta à lista de contas existentes
+        if isinstance(contas_existentes, list):
+            contas_existentes.append(nova_conta)
+        else:
+            contas_existentes = [nova_conta]  # Converter para lista se não for
+
+        # Gravar no ficheiro
+        with open("config/conta.json", "w") as f:
+            json.dump(contas_existentes, f, indent=4)  # Usar indent=4 para melhor legibilidade
+
+        messagebox.showinfo("Sucesso", "Conta criada com sucesso!")  # Pop-up de sucesso
+        return True
 
     def go_back(self):
         """Retorna ao menu inicial."""
@@ -69,12 +142,13 @@ class RegisterScreen:
         BeginMenu(self.root)
 
     def on_register(self):
-        # Redirect to the menu screen without checking credentials
-        self.root.destroy()  # Close the login screen
-        from GUI.menu_screen import MenuScreen  # Import MenuScreen here to avoid circular imports
-        menu_root = tk.Tk()
-        menu_screen = MenuScreen(menu_root)
-        menu_root.mainloop()
+        """Chama a função de registro e redireciona para o menu apenas se a conta for criada com sucesso."""
+        if self.register():  # Só prossegue se a conta for criada com sucesso
+            self.root.destroy()  # Fecha a tela de registro
+            from GUI.begin_menu import BeginMenu  # Import MenuScreen aqui para evitar imports circulares
+            menu_root = tk.Tk()
+            menu_screen = BeginMenu(menu_root)
+            menu_root.mainloop()
 
 
 if __name__ == "__main__":

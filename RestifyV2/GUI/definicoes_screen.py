@@ -58,9 +58,13 @@ class DefinicoesScreen:
                               padx=20, pady=10, bd=2, relief="raised", command=self.go_add_medidas)
         btn_add_medidas.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
 
+        btn_conectar_hardware = tk.Button(self.root, text="Conectar almofada", font=("Arial", 14), bg='white', fg='black',
+                                    padx=20, pady=10, bd=2, relief="raised", command=self.go_to_conectar_h)
+        btn_conectar_hardware.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
+
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
                                    padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.7, anchor="center", width=200, height=50)
 
     def go_add_medidas(self):
         self.root.destroy()  # Close the definicoes screen
@@ -76,6 +80,14 @@ class DefinicoesScreen:
         despertador_lista_root = tk.Tk()
         despertador_lista_screen = DespertadorListaScreen(despertador_lista_root)
         despertador_lista_root.mainloop()
+
+
+    def go_to_conectar_h(self):
+        self.root.destroy()  # Close the definicoes screen
+        from GUI.conexao_hardware import Conexao_Hardware # Import here to avoid circular imports
+        hardware_root = tk.Tk()
+        hardware_screen = Conexao_Hardware(hardware_root)
+        hardware_root.mainloop()
 
     def go_to_ajuste_almofada(self):
         self.root.destroy()  # Close the definicoes screen

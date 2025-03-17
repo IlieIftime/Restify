@@ -47,16 +47,19 @@ class User_menu:
 
     def create_buttons(self):
         """Cria os botões do menu principal."""
-        btn_editar_conta = tk.Button(self.root, text="Editar Conta", font=("Arial", 14), bg='white', fg='black',
+        btn_editar_conta = tk.Button(self.root, text="Editar medidas", font=("Arial", 14), bg='white', fg='black',
                                      padx=20, pady=10, bd=2, relief="raised", command=self.go_to_editar_conta)
-        btn_editar_conta.place(relx=0.5, rely=0.3, anchor="center", width=200, height=50)
+        btn_editar_conta.place(relx=0.5, rely=0.2, anchor="center", width=200, height=50)
 
-        btn_apagar_conta = tk.Button(self.root, text="Ajuste Almofada", font=("Arial", 14), bg='white', fg='black', padx=20,
+        btn_dados = tk.Button(self.root, text="Editar Email/Password", font=("Arial", 14), bg='white', fg='black',
+                                     padx=20, pady=10, bd=2, relief="raised", command=self.go_to_editar_dados)
+        btn_dados.place(relx=0.5, rely=0.3, anchor="center", width=200, height=50)
+        btn_apagar_conta = tk.Button(self.root, text="Apagar conta", font=("Arial", 14), bg='white', fg='black', padx=20,
                               pady=10, bd=2, relief="raised", command=self.go_to_apagar_conta)
         btn_apagar_conta.place(relx=0.5, rely=0.4, anchor="center", width=200, height=50)
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
                                    padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
 
 
 
@@ -66,6 +69,13 @@ class User_menu:
         editar_conta_root = tk.Tk()
         editar_conta_screen = Editar_conta(editar_conta_root)
         editar_conta_root.mainloop()
+
+    def go_to_editar_dados(self):
+        self.root.destroy()  # Close the definicoes screen
+        from GUI.mudar_dados_conta import Editar_Dados  # Import here to avoid circular imports
+        editar_dados_root = tk.Tk()
+        editar_dados_screen = Editar_Dados(editar_dados_root)
+        editar_dados_root.mainloop()
 
     def go_to_apagar_conta(self):
         self.root.destroy()  # Close the definicoes screen

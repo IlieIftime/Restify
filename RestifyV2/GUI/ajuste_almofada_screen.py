@@ -33,7 +33,8 @@ class AjusteAlmofadaScreen:
         btn_down.place(relx=0.5, rely=0.5, anchor="center", width=200, height=200)
 
         # Create a button to go back
-        btn_voltar = tk.Button(root, text="Voltar", font=("Arial", 14), bg='blue', fg='white', padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
+        btn_voltar = tk.Button(root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
         btn_voltar.place(relx=0.5, rely=0.7, anchor="center", width=200, height=50)
 
     def move_up(self):

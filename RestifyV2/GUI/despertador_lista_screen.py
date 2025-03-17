@@ -38,13 +38,22 @@ class DespertadorListaScreen:
         try:
             if os.path.exists(config_path):
                 with open(config_path, "r") as f:
-                    dados = json.load(f)
-                    if isinstance(dados, list):  # Verificar se os dados são uma lista de despertadores
-                        self.despertadores = dados
+                    data = json.load(f)
+                    if "despertadores" in data:
+                        self.despertadores = data["despertadores"]
                     else:
-                        self.despertadores = [dados]  # Caso seja um único despertador
+                        self.despertadores = []
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao carregar configurações: {e}")
+
+    def save_config(self):
+        """Salva a lista de despertadores no ficheiro config.json."""
+        config_path = os.path.join("config", "config.json")
+        try:
+            with open(config_path, "w") as f:
+                json.dump({"despertadores": self.despertadores}, f, indent=4)
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao salvar configurações: {e}")
 
     def show_despertadores_list(self):
         """Atualiza a interface garantindo que apenas os elementos corretos sejam exibidos."""
@@ -90,14 +99,14 @@ class DespertadorListaScreen:
                 btn_apagar.pack(side="left", padx=5)
 
         # Botão para adicionar novo despertador
-        btn_adicionar = tk.Button(self.root, text="Adicionar Alarme", command=self.adicionar_despertador,
-                                  width=20, bg='blue', fg='white', font=("Arial", 12))
-        btn_adicionar.place(relx=0.5, rely=0.8, anchor="center")
+        btn_adicionar = tk.Button(self.root, text="Adicionar alarme", font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised", command=self.adicionar_despertador)
+        btn_adicionar.place(relx=0.4, rely=0.75, anchor="center")
 
         # Botão para voltar
-        btn_voltar = tk.Button(self.root, text="Voltar", command=self.go_back,
-                               width=20, bg='red', fg='white', font=("Arial", 12))
-        btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
+        btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
+        btn_voltar.place(relx=0.6, rely=0.75, anchor="center")
 
     def editar_despertador(self, despertador):
         """Fecha a tela atual e abre a tela de edição de despertador."""
@@ -110,6 +119,7 @@ class DespertadorListaScreen:
     def apagar_despertador(self, despertador):
         """Remove o despertador da lista e atualiza a exibição."""
         self.despertadores = [d for d in self.despertadores if d != despertador]
+        self.save_config()  # Salva a lista atualizada no arquivo config.json
         messagebox.showinfo("Apagado", f"Despertador {despertador['nome']} apagado com sucesso!")
         self.show_despertadores_list()
 
