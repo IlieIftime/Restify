@@ -89,12 +89,12 @@ class Editar_conta:
         # Botão para salvar alterações
         btn_salvar = tk.Button(self.root, text="Guardar alterações", font=("Arial", 12), bg='white', fg='black', padx=20, pady=10,
                              bd=2, relief="raised", command=self.salvar_alteracoes)
-        btn_salvar.place(relx=0.5, rely=0.8, anchor="center")
+        btn_salvar.place(relx=0.4, rely=0.8, anchor="center")
 
         # Botão para voltar
         btn_back = tk.Button(self.root, text="Voltar", font=("Arial", 12), bg='white', fg='black', padx=20, pady=10,
                              bd=2, relief="raised", command=self.go_back)
-        btn_back.place(relx=0.7, rely=0.8, anchor="center", width=200, height=50)
+        btn_back.place(relx=0.6, rely=0.8, anchor="center", width=200, height=50)
 
     def salvar_alteracoes(self):
         """Salva as alterações feitas pelo usuário."""

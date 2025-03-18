@@ -67,12 +67,12 @@ class Editar_Dados:
         # Botão para salvar alterações
         btn_salvar = tk.Button(self.root, text="Guardar Alterações", font=("Arial", 12),width=20, bg='white', fg='black', padx=20, pady=10,
                              bd=2, relief="raised", command=self.salvar_alteracoes)
-        btn_salvar.place(relx=0.5, rely=0.6, anchor="center")
+        btn_salvar.place(relx=0.4, rely=0.7, anchor="center")
 
         # Botão para voltar
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 12), bg='white',width=20, fg='black', padx=20, pady=10,
                              bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.7, anchor="center")
+        btn_voltar.place(relx=0.6, rely=0.7, anchor="center")
 
     def validar_email(self, email):
         """Valida o formato do email."""

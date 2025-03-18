@@ -1,0 +1,23 @@
+{
+    "despertadores_inteligentes": [
+        {
+            "id": 1,
+            "nome": "Despertador1111",
+            "hora": "7:50",
+            "dias_semana": {
+                "Segunda": false,
+                "Ter\u00e7a": false,
+                "Quarta": false,
+                "Quinta": true,
+                "Sexta": false,
+                "S\u00e1bado": false,
+                "Domingo": false
+            },
+            "audio_file": "C:/Users/iliei/OneDrive - ISCTE-IUL/Ambiente de Trabalho/Universidade 2\u00ba ano/2\u00ba Semestre/Empreendedorimos e Inova\u00e7ao II/RestifyV2/audio_records/b.mp3",
+            "som_ambiente": false,
+            "vibracao": false,
+            "ondas": true,
+            "ativo": true
+        }
+    ]
+}

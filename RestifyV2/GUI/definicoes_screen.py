@@ -62,9 +62,13 @@ class DefinicoesScreen:
                                     padx=20, pady=10, bd=2, relief="raised", command=self.go_to_conectar_h)
         btn_conectar_hardware.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
 
+        btn_test_hardware = tk.Button(self.root, text="Teste Hardware", font=("Arial", 14), bg='white', fg="black",
+                               padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_hardware)
+        btn_test_hardware.place(relx=0.5, rely=0.7, anchor="center", width=200, height=50)
+
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
                                    padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.7, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.8, anchor="center", width=200, height=50)
 
     def go_add_medidas(self):
         self.root.destroy()  # Close the definicoes screen
@@ -102,6 +106,13 @@ class DefinicoesScreen:
         user_root = tk.Tk()
         user_screen = User_menu(user_root)
         user_root.mainloop()
+
+    def go_to_test_hardware(self):
+        self.root.destroy() #Vai para a tela de teste de hardware
+        from GUI.teste_sensor_atuador import Test_Hardware
+        test_hardware_root = tk.Tk()
+        test_hardware_screen = Test_Hardware(test_hardware_root)
+        test_hardware_root.mainloop()
 
     def go_back(self):
         self.root.destroy()  # Close the definicoes screen
