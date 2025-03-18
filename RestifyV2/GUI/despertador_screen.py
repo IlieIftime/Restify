@@ -74,12 +74,12 @@ class DespertadorScreen:
             self.day_vars.append(var)
 
         # Botão para salvar
-        tk.Button(self.root, text="Salvar", command=self.save_alarm_settings, width=20, bg='blue', fg='white',
-                  font=("Arial", 12)).place(relx=0.5, rely=0.7, anchor="center")
+        tk.Button(self.root, text="Salvar", command=self.save_alarm_settings, width=20, font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised").place(relx=0.5, rely=0.6, anchor="center")
 
         # Botão para voltar
-        tk.Button(self.root, text="Voltar", command=self.go_back, width=20, bg='red', fg='white',
-                  font=("Arial", 12)).place(relx=0.5, rely=0.8, anchor="center")
+        tk.Button(self.root, text="Voltar", command=self.go_back, width=20, font=("Arial", 14), bg='white', fg="black",
+                                   padx=20, pady=10, bd=2, relief="raised").place(relx=0.5, rely=0.7, anchor="center")
 
     def save_alarm_settings(self):
         # Obter os dados do formulário
@@ -92,44 +92,24 @@ class DespertadorScreen:
         # Criar ou atualizar o despertador
         novo_despertador = {"nome": nome, "hora": hora, "active_days": dias_ativos, "ativo": True}
         if self.despertador:
+            # Atualiza o despertador existente
             self.despertador.update(novo_despertador)
         else:
+            # Adiciona um novo despertador
             self.despertadores.append(novo_despertador)
 
         # Guardar as definições no ficheiro JSON
-        self.save_config(novo_despertador)
+        self.save_config()
 
         messagebox.showinfo("Salvo", f"Despertador {nome} salvo com sucesso!")
         self.go_back()
 
-    def save_config(self, despertador):
+    def save_config(self):
         """Guarda as definições no ficheiro config.json."""
         config_path = os.path.join("config", "config.json")
-
-        # Tentar carregar os dados existentes
-        if os.path.exists(config_path):
-            try:
-                with open(config_path, "r") as f:
-                    data = json.load(f)
-            except json.JSONDecodeError:
-                data = {}
-        else:
-            data = {}
-
-        if "despertadores" not in data:
-            data["despertadores"] = []
-
-        if self.despertador:
-            for i, d in enumerate(data["despertadores"]):
-                if d["hora"] == self.despertador["hora"]:
-                    data["despertadores"][i] = despertador
-                    break
-        else:
-            data["despertadores"].append(despertador)
-
         try:
             with open(config_path, "w") as f:
-                json.dump(data, f, indent=4)
+                json.dump({"despertadores": self.despertadores}, f, indent=4)
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao guardar configurações: {e}")
 

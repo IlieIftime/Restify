@@ -1,11 +1,14 @@
 {
     "despertadores": [
         {
-            "nome": "umteste",
-            "hora": "07:15",
+            "nome": "zzzzz",
+            "hora": "07:55",
             "active_days": [
                 "Segunda",
+                "Ter\u00e7a",
+                "Quarta",
                 "Quinta",
+                "Sexta",
                 "Domingo"
             ],
             "ativo": true
@@ -14,6 +17,15 @@
             "nome": "doistestes",
             "hora": "10:10",
             "active_days": [
+                "S\u00e1bado"
+            ],
+            "ativo": true
+        },
+        {
+            "nome": "Despertador",
+            "hora": "07:18",
+            "active_days": [
+                "Quarta",
                 "S\u00e1bado"
             ],
             "ativo": true
