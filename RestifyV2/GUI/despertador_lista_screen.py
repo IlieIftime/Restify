@@ -33,6 +33,15 @@ class DespertadorListaScreen:
         # Exibir a lista de despertadores
         self.show_despertadores_list()
 
+    def save_config(self):
+        """Salva a lista de despertadores normais no ficheiro config.json."""
+        config_path = os.path.join("config", "config.json")
+        try:
+            with open(config_path, "w") as f:
+                json.dump({"despertadores": self.despertadores}, f, indent=4)
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao salvar configurações: {e}")
+
     def load_config(self):
         """Carrega as definições dos ficheiros config.json e despertador_inteligente.json."""
         # Carregar despertadores normais
@@ -60,15 +69,6 @@ class DespertadorListaScreen:
                         self.despertadores_inteligentes = []
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao carregar despertadores inteligentes: {e}")
-
-    def save_config(self):
-        """Salva a lista de despertadores normais no ficheiro config.json."""
-        config_path = os.path.join("config", "config.json")
-        try:
-            with open(config_path, "w") as f:
-                json.dump({"despertadores": self.despertadores}, f, indent=4)
-        except Exception as e:
-            messagebox.showerror("Erro", f"Erro ao salvar configurações: {e}")
 
     def save_inteligente_config(self):
         """Salva a lista de despertadores inteligentes no ficheiro despertador_inteligente.json."""
@@ -109,17 +109,19 @@ class DespertadorListaScreen:
 
         # Botão para adicionar novo despertador
         btn_adicionar = tk.Button(self.root, text="Adicionar alarme", font=("Arial", 14), bg='white', fg="black",
-                                   padx=20, pady=10, bd=2, relief="raised", command=self.adicionar_despertador)
+                                  padx=20, pady=10, bd=2, relief="raised", command=self.adicionar_despertador)
         btn_adicionar.place(relx=0.25, rely=0.75, anchor="center")
 
         # Botão para adicionar despertador inteligente
-        btn_adicionar_desp_inteligente = tk.Button(self.root, text="Adicionar alarme inteligente", font=("Arial", 14), bg='white', fg="black",
-                                  padx=20, pady=10, bd=2, relief="raised", command=self.add_despertador_inteligente)
+        btn_adicionar_desp_inteligente = tk.Button(self.root, text="Adicionar alarme inteligente", font=("Arial", 14),
+                                                   bg='white', fg="black",
+                                                   padx=20, pady=10, bd=2, relief="raised",
+                                                   command=self.add_despertador_inteligente)
         btn_adicionar_desp_inteligente.place(relx=0.5, rely=0.75, anchor="center")
 
         # Botão para voltar
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
-                                   padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
+                               padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
         btn_voltar.place(relx=0.75, rely=0.75, anchor="center")
 
     def create_despertador_row(self, frame, despertador, tipo):

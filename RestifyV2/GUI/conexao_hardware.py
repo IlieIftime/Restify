@@ -89,6 +89,8 @@ class Conexao_Hardware:
             widget.destroy()
         DefinicoesScreen(self.root)
 
+    def nome_ligação(self):
+        pass
 
 if __name__ == "__main__":
     root = tk.Tk()

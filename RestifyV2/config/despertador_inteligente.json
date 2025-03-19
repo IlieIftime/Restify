@@ -2,13 +2,13 @@
     "despertadores_inteligentes": [
         {
             "id": 1,
-            "nome": "Despertador1111",
-            "hora": "7:50",
+            "nome": "P",
+            "hora": "7:0",
             "dias_semana": {
                 "Segunda": false,
                 "Ter\u00e7a": false,
                 "Quarta": false,
-                "Quinta": true,
+                "Quinta": false,
                 "Sexta": false,
                 "S\u00e1bado": false,
                 "Domingo": false
@@ -16,7 +16,64 @@
             "audio_file": "C:/Users/iliei/OneDrive - ISCTE-IUL/Ambiente de Trabalho/Universidade 2\u00ba ano/2\u00ba Semestre/Empreendedorimos e Inova\u00e7ao II/RestifyV2/audio_records/b.mp3",
             "som_ambiente": false,
             "vibracao": false,
-            "ondas": true,
+            "ondas": false,
+            "ativo": true
+        },
+        {
+            "id": 2,
+            "nome": "A",
+            "hora": "7:0",
+            "dias_semana": {
+                "Segunda": false,
+                "Ter\u00e7a": false,
+                "Quarta": false,
+                "Quinta": false,
+                "Sexta": false,
+                "S\u00e1bado": false,
+                "Domingo": false
+            },
+            "audio_file": null,
+            "som_ambiente": false,
+            "vibracao": false,
+            "ondas": false,
+            "ativo": true
+        },
+        {
+            "id": 3,
+            "nome": "B",
+            "hora": "7:0",
+            "dias_semana": {
+                "Segunda": false,
+                "Ter\u00e7a": false,
+                "Quarta": false,
+                "Quinta": false,
+                "Sexta": false,
+                "S\u00e1bado": false,
+                "Domingo": false
+            },
+            "audio_file": null,
+            "som_ambiente": false,
+            "vibracao": false,
+            "ondas": false,
+            "ativo": true
+        },
+        {
+            "id": 4,
+            "nome": "C",
+            "hora": "10:0",
+            "dias_semana": {
+                "Segunda": false,
+                "Ter\u00e7a": false,
+                "Quarta": false,
+                "Quinta": false,
+                "Sexta": false,
+                "S\u00e1bado": false,
+                "Domingo": false
+            },
+            "audio_file": null,
+            "som_ambiente": false,
+            "vibracao": false,
+            "ondas": false,
             "ativo": true
         }
     ]

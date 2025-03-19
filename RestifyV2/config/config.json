@@ -8,6 +8,20 @@
                 "S\u00e1bado"
             ],
             "ativo": true
+        },
+        {
+            "nome": "Despertador2",
+            "hora": "07:00",
+            "active_days": [],
+            "ativo": true
+        },
+        {
+            "nome": "D",
+            "hora": "17:00",
+            "active_days": [
+                "Sexta"
+            ],
+            "ativo": true
         }
     ]
 }

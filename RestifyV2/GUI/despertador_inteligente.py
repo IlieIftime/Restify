@@ -212,10 +212,19 @@ class Despertador_Inteligente:
 
     def guardar_despertador(self):
         """Guarda as configurações do despertador no ficheiro JSON."""
+        # Carregar a lista existente de despertadores inteligentes
+        inteligente_path = os.path.join("config", "despertador_inteligente.json")
+        if os.path.exists(inteligente_path):
+            with open(inteligente_path, "r") as f:
+                data = json.load(f)
+                despertadores_inteligentes = data.get("despertadores_inteligentes", [])
+        else:
+            despertadores_inteligentes = []
+
         # Verifica se estamos editando um despertador existente ou criando um novo
         if self.despertador is None:
             # Se for um novo despertador, cria um novo ID
-            novo_id = len(self.despertadores_inteligentes) + 1 if self.despertadores_inteligentes else 1
+            novo_id = max([d["id"] for d in despertadores_inteligentes], default=0) + 1
             despertador = {
                 "id": novo_id,
                 "nome": self.nome_var.get(),
@@ -228,7 +237,7 @@ class Despertador_Inteligente:
                 "ativo": True  # Por padrão, o despertador é ativado ao ser guardado
             }
             # Adiciona o novo despertador à lista
-            self.despertadores_inteligentes.append(despertador)
+            despertadores_inteligentes.append(despertador)
         else:
             # Se estiver editando um despertador existente, atualiza as configurações
             despertador = {
@@ -243,13 +252,13 @@ class Despertador_Inteligente:
                 "ativo": True  # Por padrão, o despertador é ativado ao ser guardado
             }
             # Atualiza o despertador na lista
-            for i, desp in enumerate(self.despertadores_inteligentes):
+            for i, desp in enumerate(despertadores_inteligentes):
                 if desp["id"] == self.despertador["id"]:
-                    self.despertadores_inteligentes[i] = despertador
+                    despertadores_inteligentes[i] = despertador
                     break
 
         # Salva as configurações no ficheiro JSON
-        self.save_inteligente_config()
+        self.save_inteligente_config(despertadores_inteligentes)
 
         # Mostra mensagem de sucesso
         messagebox.showinfo("Sucesso", "Despertador guardado com sucesso!")
@@ -257,12 +266,12 @@ class Despertador_Inteligente:
         # Volta para a lista de despertadores
         self.go_back()
 
-    def save_inteligente_config(self):
+    def save_inteligente_config(self, despertadores_inteligentes):
         """Salva a lista de despertadores inteligentes no ficheiro despertador_inteligente.json."""
         inteligente_path = os.path.join("config", "despertador_inteligente.json")
         try:
             with open(inteligente_path, "w") as f:
-                json.dump({"despertadores_inteligentes": self.despertadores_inteligentes}, f, indent=4)
+                json.dump({"despertadores_inteligentes": despertadores_inteligentes}, f, indent=4)
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao salvar despertadores inteligentes: {e}")
 
