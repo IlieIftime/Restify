@@ -129,12 +129,16 @@ class DespertadorListaScreen:
         linha = tk.Frame(frame, bg="white")
         linha.pack(fill="x", pady=5)
 
-        # Checkbox
-        var = tk.BooleanVar(value=despertador.get("ativo", False))
-        chk = tk.Checkbutton(linha,
-                             text=f"{despertador.get('nome', 'Sem nome')} - {despertador.get('hora', '??:??')} ({tipo})",
-                             variable=var, bg='white', fg='black')
-        chk.pack(side="left", padx=10)
+        # Nome e hora do despertador
+        lbl_nome = tk.Label(linha, text=f"{despertador.get('nome', 'Sem nome')} - {despertador.get('hora', '??:??')} ({tipo})",
+                            font=("Arial", 12), bg='white', fg='black')
+        lbl_nome.pack(side="left", padx=10)
+
+        # Botão Ativar/Desativar
+        btn_ativar_desativar = tk.Button(linha, text="Ativar" if not despertador.get("ativo", False) else "Desativar",
+                                         command=lambda d=despertador, t=tipo: self.toggle_alarme(d, t),
+                                         width=10, bg='green' if not despertador.get("ativo", False) else 'red', fg='white', font=("Arial", 10))
+        btn_ativar_desativar.pack(side="left", padx=5)
 
         # Botão Editar
         btn_editar = tk.Button(linha, text="Editar", command=lambda d=despertador, t=tipo: self.editar_despertador(d, t),
@@ -145,6 +149,25 @@ class DespertadorListaScreen:
         btn_apagar = tk.Button(linha, text="Apagar", command=lambda d=despertador, t=tipo: self.apagar_despertador(d, t),
                                width=10, bg='red', fg='white', font=("Arial", 10))
         btn_apagar.pack(side="left", padx=5)
+
+    def toggle_alarme(self, despertador, tipo):
+        """Alterna o estado do alarme (ativo/inativo)."""
+        try:
+            # Inverte o estado do alarme
+            despertador["ativo"] = not despertador.get("ativo", False)
+
+            # Salva as alterações no arquivo JSON correspondente
+            if tipo == "Normal":
+                self.save_config()
+            else:
+                self.save_inteligente_config()
+
+            # Atualiza a interface
+            self.show_despertadores_list()
+
+            messagebox.showinfo("Sucesso", f"Alarme {despertador['nome']} {'ativado' if despertador['ativo'] else 'desativado'}!")
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao alternar estado do alarme: {e}")
 
     def editar_despertador(self, despertador, tipo):
         """Fecha a tela atual e abre a tela de edição de despertador."""
@@ -195,7 +218,7 @@ class DespertadorListaScreen:
         definicoes_root.mainloop()
 
 
-# Exemplo de uso
+# Exemplo de uso"
 if __name__ == "__main__":
     root = tk.Tk()
     app = DespertadorListaScreen(root)

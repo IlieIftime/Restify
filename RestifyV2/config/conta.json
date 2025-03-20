@@ -22,5 +22,9 @@
     {
         "email": "abcd@dominio.com",
         "password": "11111111"
+    },
+    {
+        "email": "d@d.com",
+        "password": "11111111"
     }
 ]

@@ -21,31 +21,37 @@ class Test_Hardware: #checkpoint
         self.show_logo()
         btn_test_alarm = tk.Button(self.root, text="Teste alarme", font=("Arial", 14), bg='white', fg='black',
                                    padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_alarm) #botao redireciona test alarms
-        btn_test_alarm.place(relx=0.5, rely=0.2, anchor="center", width=200, height=50)
+        btn_test_alarm.place(relx=0.3, rely=0.25, anchor="center", width=200, height=50)
 
         btn_test_conexion = tk.Button(self.root, text="Teste conexão", font=("Arial", 14), bg='white', fg='black',
                                        padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_conexion) #botao redireciona test conexion
-        btn_test_conexion.place(relx=0.5, rely=0.29, anchor="center", width=200, height=50)
+        btn_test_conexion.place(relx=0.6, rely=0.25, anchor="center", width=200, height=50)
 
         btn_test_micro = tk.Button(self.root, text="Teste microfone", font=("Arial", 14), bg='white', fg='black',
                                        padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_micro) #botao redireciona test micro
-        btn_test_micro.place(relx=0.5, rely=0.38, anchor="center", width=200, height=50)
+        btn_test_micro.place(relx=0.3, rely=0.4, anchor="center", width=200, height=50)
 
         btn_test_servos = tk.Button(self.root, text="Teste servomotores", font=("Arial", 14), bg='white', fg='black',
                                        padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_servos) #botao redireciona test servos
-        btn_test_servos.place(relx=0.5, rely=0.48, anchor="center", width=200, height=50)
+        btn_test_servos.place(relx=0.6, rely=0.4, anchor="center", width=200, height=50)
 
         btn_test_speaker = tk.Button(self.root, text="Teste altifalantes", font=("Arial", 14), bg='white', fg='black',
                                        padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_speaker) #botao redireciona test speaker
-        btn_test_speaker.place(relx=0.5, rely=0.58, anchor="center", width=200, height=50)
+        btn_test_speaker.place(relx=0.3, rely=0.55, anchor="center", width=200, height=50)
 
         btn_test_vib_motor = tk.Button(self.root, text="Teste motor vibratório", font=("Arial", 14), bg='white', fg='black',
                                        padx=20, pady=10, bd=2, relief="raised", command=self.go_to_test_vib_motor) #botao redireciona test vibraçao motor
-        btn_test_vib_motor.place(relx=0.5, rely=0.68, anchor="center", width=200, height=50)
+        btn_test_vib_motor.place(relx=0.6, rely=0.55, anchor="center", width=200, height=50)
+
+        btn_test_pressao_proxi = tk.Button(self.root, text="Test sensor pressão", font=("Arial", 14), bg='white',
+                                       fg='black',
+                                       padx=20, pady=10, bd=2, relief="raised",
+                                       command=self.go_to_test_pressao_proxi)  # botao redireciona test vibraçao motor
+        btn_test_pressao_proxi.place(relx=0.3, rely=0.7, anchor="center", width=200, height=50)
 
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back) #botao redireciona para a pagina anterior
-        btn_voltar.place(relx=0.5, rely=0.78, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.6, rely=0.7, anchor="center", width=200, height=50)
 
 
     def go_to_test_alarm(self):
@@ -114,3 +120,11 @@ class Test_Hardware: #checkpoint
             label_logo.place(relx=0.5, rely=0.085, anchor="center")
         except Exception as e:
             print(f"Erro ao carregar logo: {e}")
+
+    def go_to_test_pressao_proxi(self):
+        """Redireciona para a tela de teste de pressão/proximidade"""
+        self.root.destroy()
+        from tests.test_pressao_proximidade import TestPressaoProximidade
+        test_pressao_proxi_root = tk.Tk()
+        test_pressao_proxi_screen = TestPressaoProximidade(test_pressao_proxi_root)
+        test_pressao_proxi_root.mainloop()

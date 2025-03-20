@@ -6,6 +6,7 @@ import os
 import pygame  # Para reproduzir áudio
 import socket  # Para comunicação Wi-Fi
 
+
 class Test_Alarm:
     def __init__(self, root):
         self.root = root
@@ -31,74 +32,115 @@ class Test_Alarm:
         self.HOST = '192.168.1.100'  # Substitua pelo IP do Raspberry Pi
         self.PORT = 65432
 
-        # Exibir logo e lista de alarmes
-        self.show_logo()
-        self.show_alarms()
+        # Lista de despertadores (inicialmente vazia)
+        self.despertadores = []
+        self.despertadores_inteligentes = []
+
+        # Carregar definições dos ficheiros JSON
+        self.load_config()
+
+        # Exibir a lista de despertadores
+        self.show_despertadores_list()
+
+    def load_config(self):
+        """Carrega as definições dos ficheiros config.json e despertador_inteligente.json."""
+        # Carregar despertadores normais
+        config_path = os.path.join("config", "config.json")
+        try:
+            if os.path.exists(config_path):
+                with open(config_path, "r") as f:
+                    data = json.load(f)
+                    if "despertadores" in data:
+                        self.despertadores = data["despertadores"]
+                    else:
+                        self.despertadores = []
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao carregar configurações: {e}")
+
+        # Carregar despertadores inteligentes
+        inteligente_path = os.path.join("config", "despertador_inteligente.json")
+        try:
+            if os.path.exists(inteligente_path):
+                with open(inteligente_path, "r") as f:
+                    data = json.load(f)
+                    if "despertadores_inteligentes" in data:
+                        self.despertadores_inteligentes = data["despertadores_inteligentes"]
+                    else:
+                        self.despertadores_inteligentes = []
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao carregar despertadores inteligentes: {e}")
+
+    def show_despertadores_list(self):
+        """Atualiza a interface garantindo que apenas os elementos corretos sejam exibidos."""
+        # Limpar widgets, mas manter o fundo
+        for widget in self.root.winfo_children():
+            if widget != self.label_fundo:
+                widget.destroy()
+
+        # Título
+        tk.Label(self.root, text="Lista de Despertadores Ativos", font=("Arial", 20), bg='lightgray', fg='black').place(
+            relx=0.5, rely=0.1, anchor="center")
+
+        if not self.despertadores and not self.despertadores_inteligentes:
+            # Exibir mensagem se não houver alarmes
+            tk.Label(self.root, text="Nenhum alarme adicionado.", font=("Arial", 14), bg='lightgray', fg='black').place(
+                relx=0.5, rely=0.3, anchor="center")
+        else:
+            # Criar um frame para os despertadores
+            frame_lista = tk.Frame(self.root, bg="white")
+            frame_lista.place(relx=0.5, rely=0.5, anchor="center")
+
+            # Exibir despertadores normais
+            if self.despertadores:
+                tk.Label(frame_lista, text="Alarmes Normais", font=("Arial", 16), bg='lightgray', fg='black').pack(pady=10)
+                for despertador in self.despertadores:
+                    self.create_despertador_row(frame_lista, despertador, "Normal")
+
+            # Exibir despertadores inteligentes
+            if self.despertadores_inteligentes:
+                tk.Label(frame_lista, text="Alarmes Inteligentes", font=("Arial", 16), bg='lightgray', fg='black').pack(pady=10)
+                for despertador in self.despertadores_inteligentes:
+                    self.create_despertador_row(frame_lista, despertador, "Inteligente")
 
         # Botão Voltar
-        btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
+        btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg="black",
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.8, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
 
-    def show_logo(self):
-        """Exibe o logo centralizado no topo."""
+    def create_despertador_row(self, frame, despertador, tipo):
+        """Cria uma linha na lista de despertadores."""
+        linha = tk.Frame(frame, bg="white")
+        linha.pack(fill="x", pady=5)
+
+        # Nome e hora do despertador
+        lbl_nome = tk.Label(linha, text=f"{despertador.get('nome', 'Sem nome')} - {despertador.get('hora', '??:??')} ({tipo})",
+                            font=("Arial", 12), bg='white', fg='black')
+        lbl_nome.pack(side="left", padx=10)
+
+        # Botão Testar
+        btn_testar = tk.Button(linha, text="Testar", command=lambda d=despertador, t=tipo: self.testar_alarme(d, t),
+                               width=10, bg='blue', fg='white', font=("Arial", 10))
+        btn_testar.pack(side="left", padx=5)
+
+    def testar_alarme(self, despertador, tipo):
+        """Testa um alarme (aciona motor ou reproduz áudio)."""
         try:
-            logo_path = "img/logo.png"
-            logo_image = Image.open(logo_path).resize((200, 200), Image.LANCZOS)
-            self.logo_photo = ImageTk.PhotoImage(logo_image)
-
-            label_logo = tk.Label(self.root, image=self.logo_photo, bg='white', borderwidth=0, highlightthickness=0)
-            label_logo.place(relx=0.5, rely=0.1, anchor="center")
+            if tipo == "Normal":
+                # Enviar comando para acionar o motor vibratório
+                command = f"MOTOR:{despertador.get('porta_motor', '1')}:ON"  # Substitua 'porta_motor' pelo campo correto
+                self.send_command_to_pi(command)
+                messagebox.showinfo("Teste Alarme Normal", f"Motor vibratório acionado!")
+            elif tipo == "Inteligente":
+                # Enviar comando para reproduzir áudio
+                audio_file = despertador.get("audio_file")
+                if audio_file:
+                    command = f"AUDIO:{audio_file}"
+                    self.send_command_to_pi(command)
+                    messagebox.showinfo("Teste Alarme Inteligente", f"Reproduzindo áudio: {despertador['nome']}!")
+                else:
+                    messagebox.showwarning("Aviso", "Nenhum arquivo de áudio definido para este alarme.")
         except Exception as e:
-            print(f"Erro ao carregar logo: {e}")
-
-    def show_alarms(self):
-        """Exibe a lista de alarmes com botões para testar."""
-        try:
-            # Verificar se a pasta config existe
-            if not os.path.exists("config"):
-                raise FileNotFoundError("Pasta 'config' não encontrada.")
-
-            # Carregar alarmes normais
-            if os.path.exists("config/config.json"):
-                with open("config/config.json", "r") as f:
-                    alarmes_normais = json.load(f)
-                    if not isinstance(alarmes_normais, list):  # Verificar se é uma lista
-                        raise ValueError("O arquivo config.json deve conter uma lista de alarmes.")
-            else:
-                raise FileNotFoundError("Arquivo 'config/config.json' não encontrado.")
-
-            # Carregar alarmes inteligentes
-            if os.path.exists("config/despertador_inteligente.json"):
-                with open("config/despertador_inteligente.json", "r") as f:
-                    alarmes_inteligentes = json.load(f)
-                    if not isinstance(alarmes_inteligentes, list):  # Verificar se é uma lista
-                        raise ValueError("O arquivo despertador_inteligente.json deve conter uma lista de alarmes.")
-            else:
-                raise FileNotFoundError("Arquivo 'config/despertador_inteligente.json' não encontrado.")
-
-            # Exibir alarmes normais
-            tk.Label(self.root, text="Alarmes Normais", font=("Arial", 16), bg='lightgray', fg='black').place(relx=0.3, rely=0.25, anchor="center")
-            for i, alarme in enumerate(alarmes_normais):
-                if not isinstance(alarme, dict) or "nome" not in alarme or "porta_motor" not in alarme:
-                    raise ValueError("Formato inválido no arquivo config.json. Cada alarme deve ter 'nome' e 'porta_motor'.")
-                tk.Label(self.root, text=alarme["nome"], font=("Arial", 12), bg='lightgray', fg='black').place(relx=0.3, rely=0.3 + i * 0.05, anchor="center")
-                btn_testar = tk.Button(self.root, text="Testar", font=("Arial", 10), bg='white', fg='black',
-                                       command=lambda a=alarme: self.testar_alarme_normal(a))
-                btn_testar.place(relx=0.4, rely=0.3 + i * 0.05, anchor="center")
-
-            # Exibir alarmes inteligentes
-            tk.Label(self.root, text="Alarmes Inteligentes", font=("Arial", 16), bg='lightgray', fg='black').place(relx=0.7, rely=0.25, anchor="center")
-            for i, alarme in enumerate(alarmes_inteligentes):
-                if not isinstance(alarme, dict) or "nome" not in alarme or "caminho_audio" not in alarme:
-                    raise ValueError("Formato inválido no arquivo despertador_inteligente.json. Cada alarme deve ter 'nome' e 'caminho_audio'.")
-                tk.Label(self.root, text=alarme["nome"], font=("Arial", 12), bg='lightgray', fg='black').place(relx=0.7, rely=0.3 + i * 0.05, anchor="center")
-                btn_testar = tk.Button(self.root, text="Testar", font=("Arial", 10), bg='white', fg='black',
-                                       command=lambda a=alarme: self.testar_alarme_inteligente(a))
-                btn_testar.place(relx=0.8, rely=0.3 + i * 0.05, anchor="center")
-
-        except Exception as e:
-            messagebox.showerror("Erro", f"Erro ao carregar alarmes: {e}")
+            messagebox.showerror("Erro", f"Erro ao testar alarme: {e}")
 
     def send_command_to_pi(self, command):
         """Envia um comando para o Raspberry Pi via Wi-Fi."""
@@ -111,34 +153,16 @@ class Test_Alarm:
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao enviar comando para o Raspberry Pi: {e}")
 
-    def testar_alarme_normal(self, alarme):
-        """Testa um alarme normal (aciona motor vibratório no Raspberry Pi)."""
-        try:
-            # Enviar comando para acionar o motor vibratório
-            command = f"MOTOR:{alarme['porta_motor']}:ON"
-            self.send_command_to_pi(command)
-            messagebox.showinfo("Teste Alarme Normal", f"Motor vibratório acionado na porta {alarme['porta_motor']}!")
-        except Exception as e:
-            messagebox.showerror("Erro", f"Erro ao testar alarme normal: {e}")
-
-    def testar_alarme_inteligente(self, alarme):
-        """Testa um alarme inteligente (reproduz áudio no Raspberry Pi)."""
-        try:
-            # Enviar comando para reproduzir áudio
-            command = f"AUDIO:{alarme['caminho_audio']}"
-            self.send_command_to_pi(command)
-            messagebox.showinfo("Teste Alarme Inteligente", f"Reproduzindo áudio: {alarme['nome']}!")
-        except Exception as e:
-            messagebox.showerror("Erro", f"Erro ao testar alarme inteligente: {e}")
-
     def go_back(self):
-        """Redireciona para a tela anterior."""
+        """Fecha a tela atual e volta para a tela anterior."""
         self.root.destroy()
-        from GUI.teste_sensor_atuador import Test_Hardware
-        root = tk.Tk()
-        hardware_screen = Test_Hardware(root)
-        root.mainloop()
+        from GUI.definicoes_screen import DefinicoesScreen
+        definicoes_root = tk.Tk()
+        DefinicoesScreen(definicoes_root)
+        definicoes_root.mainloop()
 
+
+# Exemplo de uso
 if __name__ == "__main__":
     root = tk.Tk()
     app = Test_Alarm(root)

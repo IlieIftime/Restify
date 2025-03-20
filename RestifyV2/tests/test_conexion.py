@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
-
 from PIL import Image, ImageTk
 from GUI.conexao_hardware import Conexao_Hardware  # Importar a classe de conexão
+
 
 class Test_conexao:
     def __init__(self, root):
@@ -23,7 +23,7 @@ class Test_conexao:
         self.label_fundo.place(x=0, y=0, relwidth=1, relheight=1)
 
         # Instanciar a classe de conexão
-        self.conexao = Conexao_Hardware()
+        self.conexao = Conexao_Hardware(root)
 
         # Exibir logo, botão de teste e status da conexão
         self.show_logo()
@@ -33,7 +33,7 @@ class Test_conexao:
         # Botão Voltar
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.8, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.78, anchor="center", width=200, height=50)
 
     def show_logo(self):
         """Exibe o logo centralizado no topo."""
@@ -51,7 +51,7 @@ class Test_conexao:
         """Exibe o botão para testar a conexão."""
         btn_testar = tk.Button(self.root, text="Testar Conexão", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.testar_conexao)
-        btn_testar.place(relx=0.5, rely=0.4, anchor="center", width=200, height=50)
+        btn_testar.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
 
     def show_status(self):
         """Exibe o status da conexão (ligado/desligado)."""
@@ -59,13 +59,17 @@ class Test_conexao:
         self.status_on = ImageTk.PhotoImage(Image.open("img/status_on.png").resize((50, 50), Image.LANCZOS))
         self.status_off = ImageTk.PhotoImage(Image.open("img/status_off.png").resize((50, 50), Image.LANCZOS))
 
+        # Frame para organizar o ícone e o texto de status
+        status_frame = tk.Frame(self.root, bg='white')
+        status_frame.place(relx=0.5, rely=0.6, anchor="center")
+
         # Label para exibir o ícone de status
-        self.status_label = tk.Label(self.root, image=self.status_off, bg='white')
-        self.status_label.place(relx=0.5, rely=0.5, anchor="center")
+        self.status_label = tk.Label(status_frame, image=self.status_off, bg='white')
+        self.status_label.pack(side="left", padx=10)
 
         # Label para exibir o texto de status
-        self.status_text = tk.Label(self.root, text="Status: Desconhecido", font=("Arial", 14), bg='white', fg='black')
-        self.status_text.place(relx=0.5, rely=0.6, anchor="center")
+        self.status_text = tk.Label(status_frame, text="Status: Desconhecido", font=("Arial", 14), bg='white', fg='black')
+        self.status_text.pack(side="left", padx=10)
 
     def testar_conexao(self):
         """Testa a conexão e atualiza o status."""
@@ -92,6 +96,7 @@ class Test_conexao:
         root = tk.Tk()
         hardware_screen = Test_Hardware(root)
         root.mainloop()
+
 
 if __name__ == "__main__":
     root = tk.Tk()

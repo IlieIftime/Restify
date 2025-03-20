@@ -1,13 +1,38 @@
+import socket
 import tkinter as tk
 from PIL import Image, ImageTk
+from tkinter import messagebox
 
+"""a por no rasp : 
+import socket
 
+HOST = '0.0.0.0'  # Escuta em todas as interfaces
+PORT = 65432      # Porta para conexão
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    print(f"Aguardando conexões em {HOST}:{PORT}...")
+    conn, addr = s.accept()
+    with conn:
+        print(f"Conectado por {addr}")
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            if data == b"GET_BATTERY":
+                conn.sendall(b"75%")  # Simulação de status da bateria"""
 class Conexao_Hardware:
     def __init__(self, root):
         self.root = root
         self.root.title("Conexão Hardware - Restify")
         self.root.geometry("1200x1200")
         self.root.resizable(False, False)
+
+        # Configurações de conexão
+        self.HOST = '192.168.137.186'  # Substitua pelo IP do Raspberry Pi
+        self.PORT = 65432
+        self.socket = None
 
         # Aplicar imagem de fundo
         self.set_background()
@@ -66,16 +91,38 @@ class Conexao_Hardware:
         self.bateria_label.pack(pady=10)
 
     def conectar_wifi(self):
-        """Simula a conexão via Wi-Fi."""
-        self.conexao_status = "Conectado (Wi-Fi)"
-        self.bateria_status = "75%"  # Simulação de nível de bateria
-        self.atualizar_status()
+        """Conecta ao Raspberry Pi via Wi-Fi."""
+        try:
+            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.socket.connect((self.HOST, self.PORT))
+            self.conexao_status = "Conectado (Wi-Fi)"
+            self.bateria_status = self.obter_status_bateria()
+            self.atualizar_status()
+            messagebox.showinfo("Sucesso", "Conexão Wi-Fi estabelecida com sucesso!")
+        except Exception as e:
+            messagebox.showerror("Erro", f"Erro ao conectar via Wi-Fi: {e}")
 
     def conectar_bluetooth(self):
-        """Simula a conexão via Bluetooth."""
+        """Conecta ao Raspberry Pi via Bluetooth."""
+        # Implementação da conexão Bluetooth pode ser feita com a biblioteca `pybluez`
+        # Aqui é apenas uma simulação
         self.conexao_status = "Conectado (Bluetooth)"
-        self.bateria_status = "50%"  # Simulação de nível de bateria
+        self.bateria_status = self.obter_status_bateria()
         self.atualizar_status()
+        messagebox.showinfo("Sucesso", "Conexão Bluetooth estabelecida com sucesso!")
+
+    def obter_status_bateria(self):
+        """Obtém o status da bateria do Raspberry Pi."""
+        try:
+            if self.socket:
+                self.socket.sendall(b"GET_BATTERY")
+                data = self.socket.recv(1024)
+                return data.decode('utf-8')
+            else:
+                return "N/A"
+        except Exception as e:
+            print(f"Erro ao obter status da bateria: {e}")
+            return "N/A"
 
     def atualizar_status(self):
         """Atualiza os labels de status e bateria."""
@@ -91,6 +138,7 @@ class Conexao_Hardware:
 
     def nome_ligação(self):
         pass
+
 
 if __name__ == "__main__":
     root = tk.Tk()
