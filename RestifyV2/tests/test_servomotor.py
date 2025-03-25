@@ -22,8 +22,8 @@ class Test_Servos:
         self.label_fundo.place(x=0, y=0, relwidth=1, relheight=1)
 
         # Configurações de conexão com o Raspberry Pi
-        self.HOST = '192.168.1.100'  # Substitua pelo IP do Raspberry Pi
-        self.PORT = 65432
+        self.HOST = '192.168.137.138'  # Substitua pelo IP do Raspberry Pi
+        self.PORT = 65433
 
         # Exibir logo e botões para testar os servos
         self.show_logo()

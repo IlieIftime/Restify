@@ -23,8 +23,8 @@ class TestPressaoProximidade:
         self.label_fundo.place(x=0, y=0, relwidth=1, relheight=1)
 
         # Configurações de conexão com o Raspberry Pi
-        self.HOST = '192.168.1.100'  # Substitua pelo IP do Raspberry Pi
-        self.PORT = 65432
+        self.HOST = '192.168.137.138'  # Substitua pelo IP do Raspberry Pi
+        self.PORT = 65433
 
         # Exibir logo e botões para testar os sensores
         self.show_logo()
@@ -34,7 +34,7 @@ class TestPressaoProximidade:
         # Botão Voltar
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.9, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.75, anchor="center", width=200, height=50)
 
     def show_logo(self):
         """Exibe o logo centralizado no topo."""

@@ -1,6 +1,6 @@
 import socket
 
-SERVER_IP = "10.192.7.241"  # Coloca aqui o IP do Servidor
+SERVER_IP = "192.168.137.138"  # Coloca aqui o IP do Servidor
 PORT = 65432
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:

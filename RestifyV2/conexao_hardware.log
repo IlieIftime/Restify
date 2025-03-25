@@ -1,0 +1,341 @@
+2025-03-25 19:16:07,793 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:07,793 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 19:16:07,839 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:07,839 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 19:16:07,839 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 19:16:07,839 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 19:16:07,839 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 19:16:07,847 - INFO - Tentando reconexão automática...
+2025-03-25 19:16:08,158 - INFO - Tentando conectar a 192.168.137.138:65432
+2025-03-25 19:16:12,578 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:16:12,753 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:12,753 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 19:16:12,793 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:12,793 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 19:16:12,793 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 19:16:12,793 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 19:16:12,793 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 19:16:14,018 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:14,018 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 19:16:14,061 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:14,062 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 19:16:14,062 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 19:16:14,062 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 19:16:14,062 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 19:16:14,068 - INFO - Tentando reconexão automática...
+2025-03-25 19:16:14,122 - INFO - Tentando conectar a 192.168.137.138:65432
+2025-03-25 19:16:15,076 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:15,077 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 19:16:15,116 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:16:15,116 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 19:16:15,116 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 19:16:15,116 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 19:16:15,116 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 19:40:35,027 - INFO - Tentando reconexão automática...
+2025-03-25 19:40:43,920 - INFO - Tentando reconexão automática...
+2025-03-25 19:45:49,528 - INFO - Tentando reconexão automática...
+2025-03-25 19:45:50,168 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:45:55,168 - INFO - Tentando reconexão automática...
+2025-03-25 19:45:55,183 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:00,150 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:05,150 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:05,151 - INFO - Tentando reconexão automática...
+2025-03-25 19:46:10,152 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:15,153 - INFO - Tentando reconexão automática...
+2025-03-25 19:46:20,167 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:25,168 - INFO - Tentando reconexão automática...
+2025-03-25 19:46:30,161 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:35,165 - INFO - Tentando reconexão automática...
+2025-03-25 19:46:40,166 - ERROR - Erro ao conectar: Resposta inválida do servidor
+2025-03-25 19:46:45,168 - INFO - Tentando reconexão automática...
+2025-03-25 19:53:04,637 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:53:04,638 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 19:53:04,682 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 19:53:04,682 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 19:53:04,682 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 19:53:04,682 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 19:53:04,682 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 19:53:18,124 - ERROR - Erro ao receber dados: Extra data: line 1 column 155 (char 154)
+2025-03-25 19:53:28,440 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:53:32,441 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:53:36,444 - ERROR - Erro ao receber dados: Extra data: line 1 column 156 (char 155)
+2025-03-25 19:53:42,448 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:53:48,452 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:53:52,454 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:53:56,456 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:02,460 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:08,466 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:12,468 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:54:16,471 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:54:22,475 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:28,479 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:32,481 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:54:36,485 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:54:42,489 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:54:48,492 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:54:52,495 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:54:56,497 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:55:05,029 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:55:07,030 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:55:11,033 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:55:19,038 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:55:23,042 - ERROR - Erro ao receber dados: Extra data: line 1 column 161 (char 160)
+2025-03-25 19:55:27,046 - ERROR - Erro ao receber dados: Extra data: line 1 column 154 (char 153)
+2025-03-25 19:55:33,049 - ERROR - Erro ao receber dados: Extra data: line 1 column 156 (char 155)
+2025-03-25 19:55:37,057 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:55:43,062 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:55:47,065 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:55:53,068 - ERROR - Erro ao receber dados: Extra data: line 1 column 157 (char 156)
+2025-03-25 19:55:57,070 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:01,072 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:07,077 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:56:13,081 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:56:19,105 - ERROR - Erro ao receber dados: Extra data: line 1 column 156 (char 155)
+2025-03-25 19:56:21,106 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:27,109 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:33,127 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:39,134 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:41,135 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:56:47,138 - ERROR - Erro ao receber dados: Extra data: line 1 column 160 (char 159)
+2025-03-25 19:56:53,142 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:56:57,143 - ERROR - Erro ao receber dados: Extra data: line 1 column 162 (char 161)
+2025-03-25 19:57:01,146 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:57:07,150 - ERROR - Erro ao receber dados: Extra data: line 1 column 159 (char 158)
+2025-03-25 19:57:19,153 - ERROR - Erro ao receber dados: timed out
+2025-03-25 19:57:21,154 - ERROR - Erro ao receber dados: Extra data: line 1 column 158 (char 157)
+2025-03-25 19:57:27,570 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:29,578 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:31,582 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:33,584 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:35,585 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:37,586 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:39,586 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:41,587 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:43,588 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:45,589 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:47,591 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:49,591 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:51,592 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:53,593 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:55,595 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:57,596 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:57:59,597 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:01,598 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:03,599 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:05,600 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:07,601 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:09,602 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:11,603 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:13,603 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:15,606 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:17,607 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:19,608 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:21,609 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:23,610 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:25,611 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:27,612 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:29,613 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:31,614 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:33,615 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:35,616 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:37,617 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:39,618 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:41,620 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:43,620 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:45,626 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:47,627 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:49,628 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:51,629 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:53,630 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:55,630 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:57,631 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:58:59,632 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:01,633 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:03,635 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:05,636 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:07,636 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:09,638 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:11,638 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:13,639 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:15,640 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:17,641 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:19,647 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:21,648 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:23,649 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:25,650 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:27,650 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:29,651 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:31,652 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:33,652 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:35,653 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:37,740 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:39,741 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:41,742 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:43,742 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:45,743 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:47,744 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:49,745 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:51,746 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:53,747 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:55,749 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:57,750 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 19:59:59,750 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:01,751 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:03,754 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:05,754 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:07,755 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:09,756 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:11,757 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:13,758 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:15,759 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:17,760 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:19,761 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:21,762 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:23,763 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:25,763 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:27,764 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:29,766 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:31,767 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:33,767 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:35,768 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:37,769 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:39,770 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:41,771 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:43,772 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:45,773 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:47,774 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:49,774 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:51,775 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:53,776 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:55,777 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:57,777 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:00:59,778 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:01,779 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:03,780 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:05,781 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:07,782 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:09,783 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:11,784 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:13,785 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:15,786 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:17,787 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:19,788 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:21,789 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:23,790 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:25,790 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:27,791 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:29,792 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:31,793 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:33,794 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:35,795 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:37,796 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:39,797 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:41,798 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:43,799 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:45,799 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:47,801 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:49,801 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:51,802 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:53,803 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:55,804 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:57,804 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:01:59,805 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:01,806 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:03,806 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:05,808 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:07,808 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:09,810 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:11,810 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:13,812 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:15,813 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:17,814 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:19,817 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:21,818 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:23,819 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:25,819 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:27,820 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:29,821 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:31,822 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:33,823 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:35,824 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:37,826 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:39,826 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:41,828 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:43,828 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:45,831 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:47,832 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:49,832 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:51,833 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:53,834 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:55,836 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:57,836 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:02:59,838 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:01,840 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:03,841 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:05,842 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:07,843 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:09,844 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:11,845 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:13,846 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:15,847 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:17,848 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:19,849 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:21,850 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:23,852 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:25,853 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:27,854 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:29,855 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:31,856 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:33,857 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:35,858 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:37,859 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:39,861 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:41,862 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:43,863 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:45,864 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:47,865 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:49,866 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:51,867 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:53,868 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:55,869 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:57,870 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:03:59,871 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:01,872 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:03,873 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:05,875 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:07,875 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:09,876 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:11,877 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:13,878 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:15,879 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:17,880 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:19,880 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:21,881 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:23,885 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:25,890 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:27,891 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:29,894 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:04:31,895 - ERROR - Erro ao receber dados: [WinError 10054] Uma ligação existente foi forçada a fechar pelo anfitrião remoto
+2025-03-25 20:30:16,972 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 20:30:16,972 - DEBUG - STREAM b'IDAT' 41 23325
+2025-03-25 20:30:17,017 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-25 20:30:17,018 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-25 20:30:17,018 - DEBUG - STREAM b'gAMA' 54 4
+2025-03-25 20:30:17,018 - DEBUG - STREAM b'pHYs' 70 9
+2025-03-25 20:30:17,018 - DEBUG - STREAM b'IDAT' 91 65445
+2025-03-25 20:31:37,073 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:39,085 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:41,091 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:41,951 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:43,319 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:45,368 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:47,374 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:49,381 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:51,411 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:53,457 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:55,506 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:57,514 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:31:59,524 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:32:00,609 - ERROR - Erro ao receber dados: main thread is not in main loop
+2025-03-25 20:32:02,677 - INFO - Dados salvos em C:\Users\iliei\OneDrive - ISCTE-IUL\Ambiente de Trabalho\Universidade 2º ano\2º Semestre\Empreendedorimos e Inovaçao II\RestifyV2\data_recebida\data.json
+2025-03-25 20:32:03,762 - ERROR - Erro ao receber dados: main thread is not in main loop

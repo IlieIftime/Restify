@@ -29,8 +29,8 @@ class Test_Alarm:
         pygame.mixer.init()
 
         # Configurações de conexão com o Raspberry Pi
-        self.HOST = '192.168.1.100'  # Substitua pelo IP do Raspberry Pi
-        self.PORT = 65432
+        self.HOST = '192.168.137.138'  # Substitua pelo IP do Raspberry Pi
+        self.PORT = 65433
 
         # Lista de despertadores (inicialmente vazia)
         self.despertadores = []

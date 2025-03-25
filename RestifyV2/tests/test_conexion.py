@@ -1,15 +1,13 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, filedialog
 from PIL import Image, ImageTk
-from GUI.conexao_hardware import Conexao_Hardware  # Importar a classe de conexão
+from GUI.conexao_hardware import Conexao_Hardware
 
 
 class Test_conexao:
     def __init__(self, root):
         self.root = root
         self.root.title("Testar Conexão - Restify")
-
-        # Configuração da janela
         self.root.geometry("1200x1200")
         self.root.resizable(False, False)
 
@@ -30,10 +28,20 @@ class Test_conexao:
         self.show_test_button()
         self.show_status()
 
+        # Botão Enviar Dados
+        btn_enviar = tk.Button(self.root, text="Enviar Dados", font=("Arial", 14), bg='white', fg='black',
+                               padx=20, pady=10, bd=2, relief="raised", command=self.enviar_dados_teste)
+        btn_enviar.place(relx=0.5, rely=0.4, anchor="center", width=200, height=50)
+
+        # Botão Enviar Áudio
+        btn_enviar_audio = tk.Button(self.root, text="Enviar Áudio", font=("Arial", 14), bg='white', fg='black',
+                                     padx=20, pady=10, bd=2, relief="raised", command=self.enviar_audio_teste)
+        btn_enviar_audio.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
+
         # Botão Voltar
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back)
-        btn_voltar.place(relx=0.5, rely=0.78, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.5, rely=0.6, anchor="center", width=200, height=50)
 
     def show_logo(self):
         """Exibe o logo centralizado no topo."""
@@ -51,7 +59,7 @@ class Test_conexao:
         """Exibe o botão para testar a conexão."""
         btn_testar = tk.Button(self.root, text="Testar Conexão", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.testar_conexao)
-        btn_testar.place(relx=0.5, rely=0.5, anchor="center", width=200, height=50)
+        btn_testar.place(relx=0.5, rely=0.2, anchor="center", width=200, height=50)
 
     def show_status(self):
         """Exibe o status da conexão (ligado/desligado)."""
@@ -61,14 +69,15 @@ class Test_conexao:
 
         # Frame para organizar o ícone e o texto de status
         status_frame = tk.Frame(self.root, bg='white')
-        status_frame.place(relx=0.5, rely=0.6, anchor="center")
+        status_frame.place(relx=0.5, rely=0.3, anchor="center")
 
         # Label para exibir o ícone de status
         self.status_label = tk.Label(status_frame, image=self.status_off, bg='white')
         self.status_label.pack(side="left", padx=10)
 
         # Label para exibir o texto de status
-        self.status_text = tk.Label(status_frame, text="Status: Desconhecido", font=("Arial", 14), bg='white', fg='black')
+        self.status_text = tk.Label(status_frame, text="Status: Desconhecido", font=("Arial", 14), bg='white',
+                                    fg='black')
         self.status_text.pack(side="left", padx=10)
 
     def testar_conexao(self):
@@ -88,6 +97,43 @@ class Test_conexao:
             messagebox.showinfo("Teste Conexão", f"Conexão está {'ligada' if status else 'desligada'}!")
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao testar conexão: {e}")
+
+    def enviar_dados_teste(self):
+        """Envia dados de teste para o Raspberry Pi."""
+        if self.conexao.nome_ligacao():  # Verifica se a conexão está ativa
+            mensagem = "Teste de envio de dados"
+            try:
+                self.conexao.enviar_dados_teste()
+                resposta = self.conexao.socket.recv(1024)
+                print(f"Resposta do Raspberry Pi: {resposta.decode('utf-8')}")
+                messagebox.showinfo("Sucesso", f"Dados enviados: {mensagem}\nResposta: {resposta.decode('utf-8')}")
+            except Exception as e:
+                messagebox.showerror("Erro", f"Erro ao enviar dados: {e}")
+        else:
+            messagebox.showerror("Erro", "Não há conexão com o Raspberry Pi.")
+
+    def enviar_audio_teste(self):
+        """Envia um arquivo de áudio de teste para o Raspberry Pi."""
+        if self.conexao.nome_ligacao():  # Verifica se a conexão está ativa
+            try:
+                # Abre uma janela para selecionar o arquivo de áudio
+                caminho_arquivo = filedialog.askopenfilename(
+                    title="Selecione um arquivo de áudio",
+                    filetypes=(("Arquivos de áudio", "*.wav *.mp3"), ("Todos os arquivos", "*.*")))
+
+                if not caminho_arquivo:
+                    messagebox.showwarning("Aviso", "Nenhum arquivo selecionado.")
+                return
+
+                # Envia o arquivo de áudio
+                self.conexao.enviar_audio_teste(caminho_arquivo)
+                resposta = self.conexao.socket.recv(1024)
+                print(f"Resposta do Raspberry Pi: {resposta.decode('utf-8')}")
+                messagebox.showinfo("Sucesso", "Áudio enviado com sucesso!")
+            except Exception as e:
+                messagebox.showerror("Erro", f"Erro ao enviar áudio: {e}")
+        else:
+            messagebox.showerror("Erro", "Não há conexão com o Raspberry Pi.")
 
     def go_back(self):
         """Redireciona para a tela anterior."""

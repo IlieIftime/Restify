@@ -26,8 +26,8 @@ class Test_Speaker:
         pygame.mixer.init()
 
         # Configurações de conexão com o Raspberry Pi (opcional)
-        self.HOST = '192.168.1.100'  # Substitua pelo IP do Raspberry Pi
-        self.PORT = 65432
+        self.HOST = '192.168.137.138'  # Substitua pelo IP do Raspberry Pi
+        self.PORT = 65433
 
         # Exibir logo e botão para testar o speaker
         self.show_logo()

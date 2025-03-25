@@ -49,9 +49,14 @@ class Test_Hardware: #checkpoint
                                        command=self.go_to_test_pressao_proxi)  # botao redireciona test vibraçao motor
         btn_test_pressao_proxi.place(relx=0.3, rely=0.7, anchor="center", width=200, height=50)
 
+
+        btn_test_dados_r = tk.Button(self.root, text="Test receção dados", font=("Arial", 14), bg='white', fg='black',
+                               padx=20, pady=10, bd=2, relief="raised", command=self.go_to_rececao_dados) #botao redireciona para a pagina anterior
+        btn_test_dados_r.place(relx=0.6, rely=0.7, anchor="center", width=200, height=50)
+
         btn_voltar = tk.Button(self.root, text="Voltar", font=("Arial", 14), bg='white', fg='black',
                                padx=20, pady=10, bd=2, relief="raised", command=self.go_back) #botao redireciona para a pagina anterior
-        btn_voltar.place(relx=0.6, rely=0.7, anchor="center", width=200, height=50)
+        btn_voltar.place(relx=0.8, rely=0.7, anchor="center", width=200, height=50)
 
 
     def go_to_test_alarm(self):
@@ -128,3 +133,11 @@ class Test_Hardware: #checkpoint
         test_pressao_proxi_root = tk.Tk()
         test_pressao_proxi_screen = TestPressaoProximidade(test_pressao_proxi_root)
         test_pressao_proxi_root.mainloop()
+
+    def go_to_rececao_dados(self):
+        """Redireciona para a tela de teste de receção de dados"""
+        self.root.destroy()
+        from tests.test_rececao_dados import TestRececaoDados
+        test_rececao_dados_root = tk.Tk()
+        test_rececao_dados_screen = TestRececaoDados(test_rececao_dados_root)
+        test_rececao_dados_root.mainloop()
