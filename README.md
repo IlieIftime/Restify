@@ -10,17 +10,6 @@ Restify é o repositório com o código-fonte do projeto associado ao relatório
 - [Funcionalidades](#funcionalidades)  
 - [Pré-requisitos](#pré-requisitos)  
 - [Instalação](#instalação)  
-- [Estrutura do repositório](#estrutura-do-repositório)  
-- [Como usar](#como-usar)  
-  - [Treino](#treino)  
-  - [Avaliação](#avaliação)  
-  - [Inferência](#inferência)  
-- [Configuração](#configuração)  
-- [Reprodutibilidade](#reprodutibilidade)  
-- [Testes](#testes)  
-- [Contribuição](#contribuição)  
-- [Licença](#licença)  
-- [Contacto](#contacto)
 
 ---
 
